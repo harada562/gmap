@@ -11,6 +11,12 @@ class ShopsController < ApplicationController
 	def show
 		@shop = Shop.find(params[:id])
 	end
+
+	def destroy
+		shop = Shop.find(params[:id])
+		shop.destroy
+		redirect_to shops_path
+	end
 	private
 	def shop_params
 		params.require(:shop).permit(:address, :latitude, :longitude)
