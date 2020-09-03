@@ -26,7 +26,7 @@
     function initMap() {
 
       //初期表示位置
-      var latlng = new google.maps.LatLng(35.6735692, 139.7367042);
+      var latlng = new google.maps.LatLng({lat: <%= @basho.latitude %>, lng: <%= @basho.longitude %>});
 
       var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 9,
