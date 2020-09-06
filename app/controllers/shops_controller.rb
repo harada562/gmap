@@ -2,7 +2,7 @@ class ShopsController < ApplicationController
 	def index
 		@shop = Shop.new
 		@shops = Shop.all
-		@basho = Shop.find(31)
+		@basho = Shop.first
 	end
 	def create
 		@shop = Shop.new(shop_params)
